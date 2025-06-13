@@ -1,0 +1,76 @@
+.flashcard-container {
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #100423;
+    box-sizing: border-box;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+}
+
+.Crime {
+    background-color: #db8583;
+}
+
+.Sci-Fi\/Fantasy {
+    background-color: #d8b4fe; 
+}
+
+.Comedy {
+    background-color: #d9f99d; 
+}
+
+.Animated {
+    background-color: #fed7aa; 
+}
+
+.flashcard-photo {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.flashcard-answer {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: auto; 
+}
+
+.category-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+    align-self: center; 
+    opacity: 0.8;
+}
