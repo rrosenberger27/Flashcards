@@ -1,105 +1,166 @@
 .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: center;
 }
 
 .header {
-    margin-bottom: 2rem;
-    max-width: 600px;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 .header h1 {
-    font-size: 3rem;
-    color: #2c2733;
-    margin-bottom: 0.5rem;
+  font-size: 3rem;
+  color: #2c2733;
+  margin-bottom: 0.5rem;
 }
 
 .header h2 {
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: #2c2733;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #2c2733;
 }
 
 .header p {
-    color: #2c2733;
+  color: #2c2733;
 }
 
 button {
-    cursor: pointer;
-    border: none;
-    margin-top: 20px;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .hard-mode-btn {
-    background-color: #bb86fc;
-    color: #121212;
-    margin-bottom: 1rem;
+  background-color: #bb86fc;
+  color: #121212;
+  margin-bottom: 1rem;
 }
 
 .hard-mode-btn:hover {
-    background-color: #a362fc;
-    transform: scale(1.05);
+  background-color: #a362fc;
+  transform: scale(1.05);
 }
 
 .hint-container {
-    margin-top: 1.5rem;
-    min-height: 80px; 
+  margin-top: 1.5rem;
+  min-height: 80px;
 }
 
 .hint-btn {
-    background-color: #1103da;
-    color: white;
-    width: 200px;
+  background-color: #1103da;
+  color: white;
+  width: 200px;
 }
 
 .hint-btn:hover {
-    background-color: #01bfa9;
+  background-color: #01bfa9;
 }
 
 .hint {
-    margin-top: 1rem;
-    font-style: italic;
-    color: #302c2c;
-    font-size: 1.5rem;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #302c2c;
+  font-size: 1.5rem;
 }
 
 .prev-arrow-btn {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .arrows button {
-    background-color: #1103da;
-    color: white;
-    width: 80px;
+  background-color: #1103da;
+  color: white;
+  width: 80px;
 }
 
 .arrows button:hover {
-    background-color: #01bfa9;
+  background-color: #01bfa9;
 }
 
 .restart-btn {
-    margin-top: 50px;
-    height: 50px;
-    font-size: large;
-    width: 200px;
-    background-color: #121212;
-    color:#f4f3f3;
+  margin-top: 50px;
+  height: 65px;
+  font-size: large;
+  width: 200px;
+  background-color: #121212;
+  color: #f4f3f3;
 }
 
 .restart-btn:hover {
-    background-color: #494848;
-    transform: scale(1.1);
+  background-color: #494848;
+  transform: scale(1.1);
 }
 
 .restart-btn:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+input {
+  border: 10px solid black;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.wrong {
+  border: 10px solid red;
+}
+
+.right {
+  border: 10px solid green;
+}
+
+.guess-container button {
+  border: none;
+  margin-left: 5px;
+  margin-top: 40px;
+  border-radius: 8px;
+  padding: 16.6px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+button.wrong {
+  background-color: red;
+}
+
+button.right{
+  background-color: green;
+}
+
+.guess-container button:hover {
+  transform: scale(1.05);
+}
+
+.shuffle-btn {
+  margin-left: 10px;
+  background-color: #01bfa9;
+}
+
+.shuffle-btn:hover {
+  transform: scale(1.05);
+  background-color:#1c8f81;
+}
+
+.streak-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -20px;
+  margin-top: -10px;
+}
+
+.streak-counter p {
+  margin-left: 10px;
 }
