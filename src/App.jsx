@@ -18,7 +18,6 @@ function App() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [nextIndexes, setNextIndexes] = useState([]);
   const [gotPoint, setGotPoint] = useState(false);
-  let colorButton = true;
   
   const handleInput = (e) => {
     setGuess(e.target.value);
@@ -51,7 +50,7 @@ function App() {
     setTimeout( () => {
       setShowIndex(shuffled.pop());
       setNextIndexes(shuffled);
-    }, 200)
+    }, 100)
   };
 
   const handleNextClick = () => {
@@ -66,23 +65,28 @@ function App() {
       if (updatedPrevIndexes.length === 20) {
         setGameOver(true);
       } else {
-        const nextInd = nextIndexes.pop();
-        setShowIndex(nextInd);
+        let nextIndexesCopy = [...nextIndexes]
+        const nextIndex = nextIndexesCopy.pop();
+        setNextIndexes(nextIndexesCopy);
+        setShowIndex(nextIndex);
       }
-    }, 200);
+    }, 100);
   
   };
 
   const handlePrevClick = () => {
-    if (prevIndexes.length > 0) {
-      setNextIndexes([...nextIndexes, showIndex])
-      const newPrevIndexes = [...prevIndexes];
-      const prevInd = newPrevIndexes.pop();
-      setPrevIndexes(newPrevIndexes);
-      setShowIndex(prevInd);
-    } else {
-      setAtStart(true);
-    }
+    
+    setTimeout(() => {
+      if (prevIndexes.length > 0) {
+        setNextIndexes([...nextIndexes, showIndex])
+        const newPrevIndexes = [...prevIndexes];
+        const prevInd = newPrevIndexes.pop();
+        setPrevIndexes(newPrevIndexes);
+        setShowIndex(prevInd);
+      } else {
+        setAtStart(true);
+      }
+    }, 100)
     setOnFront(true);
     setDisplayHint(false);
     setGuessState("");
